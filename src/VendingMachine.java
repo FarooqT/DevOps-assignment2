@@ -11,6 +11,7 @@ public class VendingMachine {
     public void buyItem(String item, double money){
         if(money< items.get(item))
             throw new IllegalArgumentException();
+        System.out.println("Change is:" + (money - items.get(item)));
         items.remove(item);
 
     }
